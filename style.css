@@ -1,0 +1,347 @@
+* {
+    overflow: auto;
+}
+
+body {
+    background-color: black;
+}
+
+.rip {
+    color: mintcream;
+    padding-top: 1px;
+    text-align: center;
+    font-size: 5vh;
+}
+
+.speaker {
+    width: 250px;
+    display: block;
+    margin: auto;
+    padding: auto;
+}
+
+#dets {
+    color: red;
+    text-align: center;
+}
+
+#year {
+    font-size: 4px;
+    font-weight: 1000;
+}
+
+#purchase-date {
+    font-size: 20px;
+    margin-top: -20px;
+
+}
+
+#death-date {
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+
+/*KANDILA INI*/
+.kandol-btn {
+    color: red;
+    background-color: wheat;
+    border: 0;
+    padding: 15px;
+    margin: auto;
+    border-radius: 30px;
+}
+
+.kandol-btn:hover {
+    background-color: maroon;
+    color: wheat;
+}
+
+.kandila {
+    position: absolute;
+    font-size: 2rem;
+    animation: bloom 3s ease-out forwards;
+    opacity: 0;
+    pointer-events: none; /*para dili matahuban san kandila an mga pindotan
+                            invsible sa pointer o touch events*/
+}
+
+@keyframes bloom {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateY(50px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1) translateY(-50px);
+    }
+}
+
+
+/*PARA SA BURAK*/
+
+.burak-btn {
+    color: red;
+    background-color: wheat;
+    border: 0;
+    padding: 15px;
+    margin: auto;
+    border-radius: 30px;
+}
+
+.burak-btn:hover {
+    background-color: maroon;
+    color: wheat;
+}
+
+.burak {
+    position: absolute;
+    font-size: 2rem;
+    animation: bloom 3s ease-out forwards;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes bloom {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateY(50px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1) translateY(-50px);
+    }
+}
+
+
+#btns {
+    display: flex;
+    padding: 0 850px;
+}
+
+
+.quote {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    padding: 200px;
+    font-size: 25px;
+}
+
+
+
+
+/* Base Styles */
+body {
+    background-color: black;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.rip {
+    color: mintcream;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 5vw; /* Scales with screen width */
+}
+
+.speaker {
+    width: 80%;
+    max-width: 250px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+#dets {
+    color: red;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#year {
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+#purchase-date, #death-date {
+    font-size: 2.5vw;
+    margin-top: -10px;
+}
+
+/* Button Styles */
+.kandol-btn, .burak-btn {
+    color: red;
+    background-color: wheat;
+    border: 0;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.kandol-btn:hover, .burak-btn:hover {
+    background-color: maroon;
+    color: wheat;
+}
+
+/* Animation for Candle and Flower */
+.kandila, .burak {
+    position: absolute;
+    font-size: 2rem;
+    animation: bloom 3s ease-out forwards;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes bloom {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateY(50px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1) translateY(-50px);
+    }
+}
+
+/* Button Container */
+#btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+/* Quote Section */
+.quote {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    padding: 20px;
+    font-size: 4vw;
+    margin: 20px auto;
+}
+
+/* Responsive Design */
+@media (min-width: 1200px) {
+    .rip {
+        font-size: 4vw; /* Slightly smaller font for larger screens */
+    }
+
+    .quote {
+        font-size: 2vw;
+        padding: 40px;
+    }
+
+    #btns {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .rip {
+        font-size: 5vw;
+    }
+
+    .quote {
+        font-size: 3.5vw;
+    }
+
+    #btns {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rip {
+        font-size: 6vw;
+    }
+
+    #year {
+        font-size: 5vw;
+    }
+
+    #purchase-date, #death-date {
+        font-size: 3vw;
+    }
+
+    .quote {
+        font-size: 5vw;
+        padding: 20px;
+    }
+
+    #btns {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rip {
+        font-size: 8vw;
+    }
+
+    #year {
+        font-size: 6vw;
+    }
+
+    #purchase-date, #death-date {
+        font-size: 4vw;
+    }
+
+    .quote {
+        font-size: 6vw;
+        padding: 15px;
+    }
+
+    .kandol-btn, .burak-btn {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    #btns {
+        padding: 0 10px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .rip {
+        font-size: 10vw;
+    }
+
+    #year {
+        font-size: 7vw;
+    }
+
+    #purchase-date, #death-date {
+        font-size: 5vw;
+    }
+
+    .quote {
+        font-size: 7vw;
+        padding: 10px;
+    }
+
+    .kandol-btn, .burak-btn {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+}
